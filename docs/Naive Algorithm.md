@@ -113,6 +113,6 @@ def naive_algorithm(A, B):
   # Output:
   #[[0. 0. 0.]
   # [0. 0. 0.]]
-```
+
 
 
