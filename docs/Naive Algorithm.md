@@ -103,3 +103,16 @@ def naive_algorithm(A, B):
                 [4, 5, 6]])
   print(A.shape)  # Output: (2, 3)
 
+- `N, M = A.shape`: This is a Python feature called "tuple unpacking." It conveniently assigns the first element of the `shape` tuple to `N` and the second to `M`.
+- `raise ValueError(...)`: Standard Python way to handle cases where a function receives an argument of the right type but an inappropriate value. Error message is an "f-string", which makes it easy to include the actual mismatched dimensions.
+- `np.zeros((N, P))`: This NumPy function creates a new array of a given shape—in this case, `(N, P)`—and fills it entirely with `0.0`. We need this so we can start accumulating our sums in the next step. The double parentheses `((N, P))` are because the `shape` is passed as a single tuple argument.
+  ```python
+  N, P = 2, 3
+  C = np.zeros((N,P))
+  print(C)
+  # Output:
+  #[[0. 0. 0.]
+  # [0. 0. 0.]]
+```
+
+
