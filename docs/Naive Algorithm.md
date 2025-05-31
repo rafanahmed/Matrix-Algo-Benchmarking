@@ -1,4 +1,4 @@
-### Building Standard (Naive) Matrix Multiplication
+## Building Standard (Naive) Matrix Multiplication
 
 #### The Function Signature & Inputs:
 
