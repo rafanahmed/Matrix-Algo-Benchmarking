@@ -34,6 +34,6 @@ This means:
   - Sum those products to get $c_{ij}$.
 
 
-#### Visualization of the Naive Algorithm
+Visualization of the Naive Algorithm:
 
 ![Naive Matrix Multiplication](./assets/naive-algo.gif)
