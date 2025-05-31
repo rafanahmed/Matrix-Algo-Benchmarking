@@ -115,4 +115,3 @@ def naive_algorithm(A, B):
   # [0. 0. 0.]]
 
 
-
