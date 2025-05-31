@@ -39,7 +39,7 @@ def naive_algorithm(A, B):
 - The text within triple quotes `"""..."""` provides an explanation on what the function does, what arguments (`Args`) it expects, and what it returns (`Returns`).
 
 
-
+---
 
 #### Validating Inputs & Preparing the Result Matrix:
 
