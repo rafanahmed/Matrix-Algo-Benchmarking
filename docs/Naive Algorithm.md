@@ -78,21 +78,21 @@ def naive_algorithm(A, B):
     Returns:
         np.ndarray: The resulting product matrix of shape (N, P).
     """
-    
+
     #1. Get the dimensions of the input matrices:
     N, M = A.shape
     M_B, P = B.shape # Get shape of B seperately for the check
 
-	#2. Check if number of columns matrix A = number of rows matrix B:
-	if M != M_B:
-		raise ValueError(f"Incompatible matrix dimensions: Matrix A has {M}
-		columns, but Matrix B has {M_B} rows.")
+    #2. Check if number of columns matrix A = number of rows matrix B:
+    if M != M_B:
+	raise ValueError(f"Incompatible matrix dimensions: Matrix A has {M}
+	columns, but Matrix B has {M_B} rows.")
 
-	#3. If the check passes, create the result matrix C, initialized with zeros.
-	#   It will have N rows (from A) and P columns (from B)
-	C = np.zeros((N, P))
+    #3. If the check passes, create the result matrix C, initialized with zeros.
+    #   It will have N rows (from A) and P columns (from B)
+    C = np.zeros((N, P))
 	
-	# Rest of code...
+    # Rest of code...
 ```
 
 - `A.shape` : Property of a NumPy array that returns a tuple containing its dimensions. For a 2D matrix, it returns `(number_of_rows, number_of_columns)`.
