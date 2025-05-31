@@ -102,4 +102,4 @@ def naive_algorithm(A, B):
   A = np.array([[1, 2, 3],
                 [4, 5, 6]])
   print(A.shape)  # Output: (2, 3)
-```
+
