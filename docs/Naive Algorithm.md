@@ -37,3 +37,33 @@ This means:
 Visualization of the Naive Algorithm:
 
 ![Naive Matrix Multiplication](./assets/naive-algo.gif)
+
+
+
+**Logic**:
+- Define a Python function that contains our Naive Algorithm where the function needs to accept two matrices as inputs (our arguments). 
+- Use NumPy arrays to represent those matrices, given that they are standard for numerical operations in Python. 
+
+
+**Code Implementation**:
+```python
+import numpy as np
+
+def naive_algorithm(A, B):
+    """
+    Computes matrix product C = A * B using the naive matrix
+    multiplication algorithm.
+
+    Args:
+        A (np.ndarray): The first matrix of shape (N, M).
+        B (np.ndarray): The second matrix of shape (M, P).
+
+    Returns:
+        np.ndarray: The resulting product matrix of shape (N, P).
+    """
+    # Rest of code...
+```
+
+- `import numpy as np` : Line of code used to access the NumPy library in order to have access to the `ndarray` object, which is an efficient way to store and manipulate matrices. For conventional coding practices, we assign the object with the alias `np`.
+- `def naive_algorithm(A, B):` : Line of code that defines our Naive Algorithm function. `A` and `B` are the parameters that will hold the two input matrices when the function is called.
+- The text within triple quotes `"""..."""` provides an explanation on what the function does, what arguments (`Args`) it expects, and what it returns (`Returns`).
