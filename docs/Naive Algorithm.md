@@ -33,7 +33,6 @@ This means:
   - Multiply the $k$-th element of the $i$-th row of matrix $A$ with the $k$-th element of the $j$-th column of matrix $B$.
   - Sum those products to get $c_{ij}$.
 
----
 
 #### Visualization of the Naive Algorithm
 
