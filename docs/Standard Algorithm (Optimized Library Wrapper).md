@@ -4,6 +4,7 @@
 ### Concept and Purpose:
 
 **Mathematical Foundation**:
+
 The objective is to compute the product between two given matrices:
 
 - Let $A$ be a matrix with dimensions $N \times M$ ($N$ rows, $M$ columns).
