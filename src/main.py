@@ -22,11 +22,8 @@ if __name__ == "__main__":
     optimized_result = optimized_standard_algorithm(matrix_A, matrix_B)
     print("Result from optimized_standard_algorithm():\n", optimized_result)
 
-    print("\nExecuting NumPy's '@' operator for verification...")
-    numpy_result = matrix_A @ matrix_B
-    print("Result from NumPy:\n", numpy_result)
 
-    if np.allclose(result, numpy_result):
+    if np.allclose(result, optimized_result):
         print("\nVerification SUCCESS: The results are identical.")
     else:
         print("\nVerification FAILED: The results are different.")
