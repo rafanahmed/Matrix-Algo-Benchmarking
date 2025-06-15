@@ -11,3 +11,6 @@ def naive_algorithm(A, B):
             for k in range(M):
                 C[i, j] += A[i, k] * B[k, j]
     return C
+
+def optimized_standard_algorithm(A, B):
+    return A @ B

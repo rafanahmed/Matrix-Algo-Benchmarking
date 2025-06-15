@@ -1,5 +1,5 @@
 import numpy as np
-from src.algorithms import naive_algorithm
+from src.algorithms import naive_algorithm, optimized_standard_algorithm
 
 if __name__ == "__main__":
     print("--- Running Test Case for Naive Algorithm Multiplication ---")
@@ -15,8 +15,12 @@ if __name__ == "__main__":
     print("\nMatrix B:\n", matrix_B)
 
     print("\nExecuting naive_algorithm()...")
-    result = naive_algorithm(matrix_A, matrix_B)
+    result = naive_algorithm(matrix_A, matrix_B) 
     print("Result from naive_algorithm():\n", result)
+
+    print("\nExecuting optimized_standard_algorithm() wrapper...")
+    optimized_result = optimized_standard_algorithm(matrix_A, matrix_B)
+    print("Result from optimized_standard_algorithm():\n", optimized_result)
 
     print("\nExecuting NumPy's '@' operator for verification...")
     numpy_result = matrix_A @ matrix_B
