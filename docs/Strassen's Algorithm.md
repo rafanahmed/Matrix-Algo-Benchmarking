@@ -9,18 +9,16 @@ For large matrices, this small saving becomes monumental. The algorithm is **rec
 
 **Logic**:
 The strategy for an $N \times N$ matrix multiplication $C = AB$ is as follows:
-1. **Divide**: If the matrix is the larger than a base case (ex. $1 \times 1$), split matrix $A$ and matrix $B$ into four smaller sub-matrices (quadrants), each of size $(N /  2) \times (N /  2)$. $$
-   A = \begin{pmatrix}      
-       A_{11} & A_{12} \\
-       A_{21} & A_{22}
-       \end{pmatrix}, \quad
-   B = \begin{pmatrix}
-       B_{11} & B_{12} \\
-       B_{21} & B_{22}
-       \end{pmatrix}    
-       $$
-2. **Conquer**: Instead of performing 8 recursive multiplications with these sub-matrices, perform only 7, using Strassen's formulas (detailed later in this document).
-3. **Combine**: Combine the results of the 7 sub-problems (using more additions and subtractions) to form the quadrants of the final result matrix, $C$. 
+1. **Divide**: If the matrix is the larger than a base case (ex. $1 \times 1$), split matrix $A$ and matrix $B$ into four smaller sub-matrices (quadrants), each of size $(N /  2) \times (N /  2)$. 
+   ```ini
+A = [ [A11, A12],
+      [A21, A22] ]
+
+B = [ [B11, B12],
+      [B21, B22] ]
+```
+1. **Conquer**: Instead of performing 8 recursive multiplications with these sub-matrices, perform only 7, using Strassen's formulas (detailed later in this document).
+2. **Combine**: Combine the results of the 7 sub-problems (using more additions and subtractions) to form the quadrants of the final result matrix, $C$. 
 
 To make our initial implementation easier to understand, we will start with the KEY ASSUMPTION: **The input matrices are square and their dimension, N, is a power of 2** (ex. 2, 4, 8, 16, 32...). This ensures that when we divide by 2 repeatedly, we always get integer dimensions and the sub- matrices are always square. We can address non-power-of-two sizes later in this document. 
 
@@ -96,15 +94,14 @@ def strassens_algorithm(A, B):
 ### Dividing the Matrices:
 
 **Mathematical Foundation**:
-In our "Divide and Conquer" strategy, we take our $N \times N$ matrices, $A$ and $B$ and split them each into FOUR $(N /  2) \times (N /  2)$ sub-matrices:   $$
-   A = \begin{pmatrix}      
-       A_{11} & A_{12} \\
-       A_{21} & A_{22}
-       \end{pmatrix}, \quad
-   B = \begin{pmatrix}
-       B_{11} & B_{12} \\
-       B_{21} & B_{22}
-       \end{pmatrix} $$
+In our "Divide and Conquer" strategy, we take our $N \times N$ matrices, $A$ and $B$ and split them each into FOUR $(N /  2) \times (N /  2)$ sub-matrices:   
+```ini
+A = [ [A11, A12],
+      [A21, A22] ]
+
+B = [ [B11, B12],
+      [B21, B22] ]
+```
 - $A_{11}$ is the top-left quadrant of $A$.
 - $A_{12}$ is the top-right quadrant of $A$.
 - $A_{21}$ is the bottom-left quadrant of $A$.
