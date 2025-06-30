@@ -9,16 +9,8 @@ For large matrices, this small saving becomes monumental. The algorithm is **rec
 
 **Logic**:
 The strategy for an $N \times N$ matrix multiplication $C = AB$ is as follows:
-1. **Divide**: If the matrix is the larger than a base case (ex. $1 \times 1$), split matrix $A$ and matrix $B$ into four smaller sub-matrices (quadrants), each of size $(N /  2) \times (N /  2)$. $$
-   A = \begin{pmatrix}      
-       A_{11} & A_{12} \\
-       A_{21} & A_{22}
-       \end{pmatrix}, \quad
-   B = \begin{pmatrix}
-       B_{11} & B_{12} \\
-       B_{21} & B_{22}
-       \end{pmatrix}    
-       $$
+1. **Divide**: If the matrix is the larger than a base case (ex. $1 \times 1$), split matrix $A$ and matrix $B$ into four smaller sub-matrices (quadrants), each of size $(N /  2) \times (N /  2)$. 
+![Strassen Algorithm Screenshot](assets/screenshot-for-strassen-algo-doc.png.png)
 2. **Conquer**: Instead of performing 8 recursive multiplications with these sub-matrices, perform only 7, using Strassen's formulas (detailed later in this document).
 3. **Combine**: Combine the results of the 7 sub-problems (using more additions and subtractions) to form the quadrants of the final result matrix, $C$. 
 
@@ -96,15 +88,10 @@ def strassens_algorithm(A, B):
 ### Dividing the Matrices:
 
 **Mathematical Foundation**:
-In our "Divide and Conquer" strategy, we take our $N \times N$ matrices, $A$ and $B$ and split them each into FOUR $(N /  2) \times (N /  2)$ sub-matrices:   $$
-   A = \begin{pmatrix}      
-       A_{11} & A_{12} \\
-       A_{21} & A_{22}
-       \end{pmatrix}, \quad
-   B = \begin{pmatrix}
-       B_{11} & B_{12} \\
-       B_{21} & B_{22}
-       \end{pmatrix} $$
+In our "Divide and Conquer" strategy, we take our $N \times N$ matrices, $A$ and $B$ and split them each into FOUR $(N /  2) \times (N /  2)$ sub-matrices:
+
+![Strassen Algorithm Screenshot](assets/screenshot-for-strassen-algo-doc.png.png)
+
 - $A_{11}$ is the top-left quadrant of $A$.
 - $A_{12}$ is the top-right quadrant of $A$.
 - $A_{21}$ is the bottom-left quadrant of $A$.
