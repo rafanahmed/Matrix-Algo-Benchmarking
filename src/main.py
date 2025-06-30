@@ -33,8 +33,8 @@ if __name__ == "__main__":
     # --- Test Case 2: Square, Power-of-2 Matrices (for all algorithms) ---
     print("\n--- Testing with Square, Power-of-2 Matrices ---")
     N = 4
-    matrix_A_sq = np.random.randint(0, 10, (N, N))
-    matrix_B_sq = np.random.randint(0, 10, (N, N))
+    matrix_A_sq = np.random.randint(0, 10, (N, N)) # 4x4
+    matrix_B_sq = np.random.randint(0, 10, (N, N)) # 4x4
 
     print("\nMatrix A:\n", matrix_A_sq)
     print("\nMatrix B:\n", matrix_B_sq)
