@@ -29,8 +29,7 @@ def strassens_algorithm(A, B):
 	
 	Args:
 		A (np.ndarray): The first square matrix. Its dimension N is a power of 2.
-		B (np.ndarray): The second square matrix. Its dimension N is a power of
-		2.
+		B (np.ndarray): The second square matrix. Its dimension N is a power of 2.
 	
 	Returns:
 		np.ndarray: The resulting product matrix.
