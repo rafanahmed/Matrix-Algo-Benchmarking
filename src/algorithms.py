@@ -70,7 +70,7 @@ def block_multiply_algorithm(A, B, block_size):
                             C[i, j] += A[i, k] * B[k, j]
     return C
 
-def parallel_naive_algorithm(A, B, num_threads: int | None = None):
+def parallel_naive_algorithm(A, B, num_threads=4):
     N, M = A.shape
     M, P = B.shape
     C = np.zeros((N,P))
