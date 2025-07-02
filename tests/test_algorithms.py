@@ -95,15 +95,15 @@ print("\nReference result (A @ B):\n", ref_sq)
 # ---------------------------------------------------------------------------
 #  3) LARGE-SCALE CHECK (optional quick sanity for performance variants)
 # ---------------------------------------------------------------------------
-_pretty_header("TEST 3  ·  LARGE 128×128 MATRICES  (quick sanity)")
+_pretty_header("TEST 3  ·  LARGE 256×256 MATRICES  (quick sanity)")
 
-N_large = 128
+N_large = 256
 A_big = np.random.rand(N_large, N_large)
 B_big = np.random.rand(N_large, N_large)
 
 # Only test the fast variants to keep run-time reasonable
 fast_baseline = optimized_standard_algorithm(A_big, B_big)
-_verify(fast_baseline, strassen_padding(A_big, B_big),          "strassen_padding  (128×128)")
-_verify(fast_baseline, hybrid_strassen_padding(A_big, B_big),   "hybrid_strassen_padding (128×128)")
+_verify(fast_baseline, strassen_padding(A_big, B_big),          "strassen_padding  (256×256)")
+_verify(fast_baseline, hybrid_strassen_padding(A_big, B_big),   "hybrid_strassen_padding (256×256)")
 
 print("\nAll tests completed.")
