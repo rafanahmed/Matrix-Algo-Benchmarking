@@ -1,4 +1,4 @@
-# Matrix Multiplication Algorithm Explorer & Visualizer
+# Matrix Multiplication Algorithm Explorer & Benchmarker
 
 This repository explores the performance and implementation of various matrix multiplication algorithms. The primary goal was to benchmark a range of algorithms, from the classic textbook method to more advanced recursive and parallel approaches, to understand the practical trade-offs between theoretical complexity and real-world performance.
 
