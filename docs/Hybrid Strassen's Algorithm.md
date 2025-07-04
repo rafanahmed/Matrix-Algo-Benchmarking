@@ -3,7 +3,7 @@
 ### Concept and Purpose:
 
 **The Problem: Strassen's Overhead**
-While Strassen's algorithm is asymptotically faster than the standard algorithm ($O(N^{2.807})$ vs $O(N^3)$), it has a higher "overhead." For each recursive step, it performs many matrix additions and subtractions and manages the recursive function calls. For small matrices, this overhead costs more time than is saved by the reduction in multiplications.
+While Strassen's algorithm is asymptotically faster than the standard algorithm, it has a higher "overhead." For each recursive step, it performs many matrix additions and subtractions and manages the recursive function calls. For small matrices, this overhead costs more time than is saved by the reduction in multiplications.
 
 **The Solution: A Hybrid Approach**
 The most common and practical way to implement Strassen's algorithm is to create a **hybrid** version. This algorithm provides the best of both worlds by combining two strategies.
